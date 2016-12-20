@@ -1,0 +1,33 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "libro",
+            "otherEntityName": "libro",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "autor"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "nombre",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "nacimiento",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "nacionalidad",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20161220185033",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "autor",
+    "pagination": "pager"
+}

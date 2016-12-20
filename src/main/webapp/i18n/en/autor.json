@@ -1,0 +1,25 @@
+{
+    "libraryApp": {
+        "autor" : {
+            "home": {
+                "title": "Autors",
+                "createLabel": "Create a new Autor",
+                "createOrEditLabel": "Create or edit a Autor",
+                "search": "Search for Autor"
+            },
+            "created": "A new Autor is created with identifier {{ param }}",
+            "updated": "A Autor is updated with identifier {{ param }}",
+            "deleted": "A Autor is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Autor {{ id }}?"
+            },
+            "detail": {
+                "title": "Autor"
+            },
+            "nombre": "Nombre",
+            "nacimiento": "Nacimiento",
+            "nacionalidad": "Nacionalidad",
+            "libro": "Libro"
+        }
+    }
+}

@@ -1,0 +1,62 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myLibroLabel" data-translate="libraryApp.libro.home.createOrEditLabel">Create or edit a Libro</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.libro.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.libro.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="libraryApp.libro.titulo" for="field_titulo">Titulo</label>
+            <input type="text" class="form-control" name="titulo" id="field_titulo"
+                    ng-model="vm.libro.titulo"
+                    required />
+            <div ng-show="editForm.titulo.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.titulo.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="libraryApp.libro.paginas" for="field_paginas">Paginas</label>
+            <input type="number" class="form-control" name="paginas" id="field_paginas"
+                    ng-model="vm.libro.paginas"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="libraryApp.libro.isbn" for="field_isbn">Isbn</label>
+            <input type="text" class="form-control" name="isbn" id="field_isbn"
+                    ng-model="vm.libro.isbn"
+                    required />
+            <div ng-show="editForm.isbn.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.isbn.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label data-translate="libraryApp.libro.autor" for="field_autor">Autor</label>
+            <select class="form-control" id="field_autor" name="autor" ng-model="vm.libro.autor" ng-options="autor as autor.nombre for autor in vm.autors track by autor.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

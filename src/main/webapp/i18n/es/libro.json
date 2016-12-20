@@ -1,0 +1,25 @@
+{
+    "libraryApp": {
+        "libro" : {
+            "home": {
+                "title": "Libros",
+                "createLabel": "Crear nuevo Libro",
+                "createOrEditLabel": "Crear o editar Libro",
+                "search": "Search for Libro"
+            },
+            "created": "Un nuevo Libro ha sido creado con el identificador {{ param }}",
+            "updated": "Un Libro ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Libro ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Libro {{ id }}?"
+            },
+            "detail": {
+                "title": "Libro"
+            },
+            "titulo": "Titulo",
+            "paginas": "Paginas",
+            "isbn": "Isbn",
+            "autor": "Autor"
+        }
+    }
+}
